@@ -8,14 +8,14 @@ class PostsController < ApplicationController
 
   def create
     Post.create(content: params[:content])
-    redairect_to action: :index
+    redirect_to action: :index
   end
 
-  def checkd
-    post = post.find(params[:id])
-    if post.checkd
+  def checked  
+    post = Post.find(params[:id])
+    if post.checked
       #updateはActiveRecordのメソッド
-      post.update(checkd: false)
+      post.update(checked: false)
       #もし既読であれば未読にする
     else
       post.update(checked: true)

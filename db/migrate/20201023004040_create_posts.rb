@@ -4,8 +4,7 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.text :content
 
       #trueまたはfalseの真理値を判断する型(未読、既読を判断)
-      t.boolean :checkd
-
+      t.boolean :checked
       t.timestamps
     end
   end
